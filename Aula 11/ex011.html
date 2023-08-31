@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRASILEIROS</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    País <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar nacionalidade" onclick="calcular()">
+    <div id = "res">
+
+    </div>
+    <script>
+        function calcular(){
+            var txtp = window.document.querySelector('input#txtnac')
+            var res = window.document.querySelector('div#res')
+            var n = (txtp.value)
+            if (n == `Brasil`){
+                res.innerHTML =`Vivendo no ${n} Você é <strong>BRASILEIRO!</strong>`
+            }
+             else {
+                res.innerHTML =`Vivendo em : ${n} Você é <strong>ESTRANGEIRO!</strong>`
+            }
+
+        }
+    </script>
+</body>
+</html>
